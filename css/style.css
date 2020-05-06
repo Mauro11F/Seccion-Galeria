@@ -92,7 +92,7 @@ header.sticky ul li a:hover
     background: #121b22;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 .contenedor .buscar
 {
@@ -101,14 +101,19 @@ header.sticky ul li a:hover
     height: 40px;
     margin: 20px;
 }
-.contenedor .buscar input
+.contenedor .buscar input[type="text"]
 {
     position: absolute;
     width: 50%;
+    height: 30px;
     border-radius: 10px;
-    left: 35%;
+    padding: 0 20px;
+    left: 25%;
+    border: none;
+    color: #121b22;
+    /* background: rgba(32, 66, 84, .7); */
 }
-.contenedor .contenido
+.contenido
 {
     position: relative;
     width: 300px;
@@ -116,4 +121,68 @@ header.sticky ul li a:hover
     background: #204254;
     box-shadow: 0 30px 30px rgba(0, 0, 0, .6);
     margin: 20px 20px;
+}
+.contenido .imgbox
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.contenido .imgbox img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.contenido:hover .imgbox img
+{
+    opacity: 0;
+}
+.contenido .descripcion
+{
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+    width: 80%;
+    height: 60px;
+    background: #fff;
+    border: 2px solid #000;
+    transition: 0.5s;
+    overflow: hidden;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.contenido:hover .descripcion
+{
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+}
+.contenido .descripcion h2
+{
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 20px;
+    text-align: center;
+}
+.contenido .descripcion p
+{
+    margin: 10px 0;
+    padding: 0;
+    opacity: 0;
+    line-height: 1.2em;
+    transition: 0.5s;
+    text-align: justify;
+}
+.contenido:hover .descripcion p
+{
+    opacity: 1;
+    transition-delay: 0.3s;
 }
